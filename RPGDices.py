@@ -1,6 +1,5 @@
 import random
 from tkinter import *
-import PyPDF2
 
 def roll():
     dice_type = int(en1.get())
@@ -20,7 +19,6 @@ en2 = Entry(window)
 lb3 = Label(window, text="Result")
 photo = PhotoImage(file="dice.png")
 lbf = Label(window, image=photo)
-enc = Label(window, text="Encounter")
 
 lb1.grid(row=1, column=0, pady=10)
 en1.grid(row=2, column=0)
@@ -28,11 +26,10 @@ lb2.grid(row=3, column=0)
 en2.grid(row=4, column=0)
 lb3.grid(row=5, column=0, pady=20)
 lbf.grid(row=0, column=0)
-enc.grid(row=1, column=12)
 
 roll = Button(window, width=20, text="Roll!", command=roll)
 roll.grid(row=6, column=0, padx=5, pady=5)
 
-window.geometry("580x300")
+window.geometry("260x300")
 window.title("RPG Dices")
 window.mainloop()
